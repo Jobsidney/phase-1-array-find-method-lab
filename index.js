@@ -63,6 +63,15 @@ const record = [
 
 
 let superbowlWin=function(superbowlTeam){
-    superbowlTeam=array=>array.find(item => item.result==="W");
-    return superbowlTeam(record).result==="W"?superbowlTeam(record).year:'undefined';}
+    let winner=superbowlTeam.find(item => item.result==="W");
+    return winner?winner.year:undefined;}
 console.log(superbowlWin(record))
+// function superbowlWin(superRecord){
+//   const user=superRecord.find(item=>item.result==="W");
+//   if(user){
+//     return user.year;
+//   }else{
+//     return undefined;
+//   }
+// }
+// superbowlWin(record);
